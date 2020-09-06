@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_appointment" android:title="@string/nav_appointments"
+            android:icon="@drawable/ic_baseline_calendar_today_24"/>
+
+        <item android:id="@+id/nav_consult" android:title="@string/nav_consultations"
+            android:icon="@drawable/ic_baseline_chat_24"/>
+
+        <item android:id="@+id/nav_test" android:title="@string/nav_test"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+
+        <item android:id="@+id/nav_docs" android:title="@string/nav_doctors"
+            android:icon="@drawable/ic_baseline_person_add_24"/>
+
+
+        <item android:id="@+id/nav_rem" android:title="@string/nav_reminder"
+            android:icon="@drawable/ic_baseline_access_alarm_24"/>
+
+
+        <item android:id="@+id/nav_med" android:title="@string/nav_medical_records"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+
+        <item android:id="@+id/nav_pay" android:title="@string/nav_pay"
+            android:icon="@drawable/ic_baseline_payment_24"/>
+
+    </group>
+
+    <item android:title="Settings">
+
+        <menu>
+            <group>
+                <item android:id="@+id/nav_read" android:title="@string/nav_read"
+                    android:icon="@drawable/ic_baseline_library_books_24"/>
+                <item android:id="@+id/nav_help" android:title="@string/nav_help"
+                    android:icon="@drawable/ic_baseline_help_24"/>
+                <item android:id="@+id/nav_settings" android:title="@string/nav_settings"
+                    android:icon="@drawable/ic_baseline_settings_24"/>
+
+                <item android:id="@+id/nav_logout" android:title="@string/nav_logout"
+                    android:icon="@drawable/ic_baseline_power_settings_new_24"/>
+
+
+
+
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

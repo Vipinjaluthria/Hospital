@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/female_avatar"
+            android:padding="5dp"
+            ></ImageView>
+
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/username"
+                     android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textFontWeight="1000"
+                    android:layout_width="wrap_content"
+                    android:padding="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Greta ThunderBerg" />
+
+                <TextView
+                    android:id="@+id/view_profile"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:textFontWeight="400"
+
+                    android:padding="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View And Edit Profile" />
+
+
+                <TextView
+                    android:id="@+id/complete_status"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5% completed" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:padding="1dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#808080"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/plus_member"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textFontWeight="500"
+
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospital Plus" />
+
+        <TextView
+
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textFontWeight="300"
+
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Plan for your family" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
