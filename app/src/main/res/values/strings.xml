@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Hospital</string>
+
+
+    <!--    nav-->
+
+    <string name="nav_appointments">Appointments</string>
+    <string name="nav_consultations">Consultations</string>
+    <string name="nav_test">Test Bookings</string>
+    <string name="nav_doctors">My Doctors</string>
+    <string name="nav_reminder">Reminder</string>
+    <string name="nav_help">Help Center</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logout">Logout</string>
+    <string name="nav_medical_records">Medical Records</string>
+    <string name="nav_read">Read About Health</string>
+    <string name="nav_pay">Payment</string>
+
+
+    <string name="lets_get_started">Get Started</string>
+    <string name="splash_string_1">Online Consultation</string>
+    <string name="splash_string_2">Book Appointment</string>
+    <string name="splash_string_3">Quick Testing </string>
+    <string name="splash_string_4">Regular Health Tips</string>
+
+
+    <string name="splash_desc_1">Talk to our doctors anytime
+    anywhere with one click</string>
+    <string name="splash_desc_2">Book tests prescribed by your
+doctor eaisly  and results will be
+         be ready in no time. </string>
+    <string name="splash_desc_3">Book appointment  online without
+         waiting for long queue</string>
+
+    <string name="splash_desc_4">We Provide regular  health tips
+     every day to keep you fit.</string>
 </resources>
