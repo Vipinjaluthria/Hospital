@@ -2,77 +2,147 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+
     tools:context=".Screens.HomePageActivity"
-    tools:openDrawer="start"
-    android:id="@+id/drawer_layout"
 
     >
 
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
-        app:headerLayout="@layout/nav_header"
         android:layout_gravity="start"
-        app:menu="@menu/main_menu"
-        android:id="@+id/nav_view"
+        android:background="@color/colorWhite"
         android:theme="@style/navTheme"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_menu"
 
-        />
+        >
 
 
+    </com.google.android.material.navigation.NavigationView>
 
-  <LinearLayout
-      android:id="@+id/home_content"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:background="@color/colorWhite">
 
-      <RelativeLayout
-        android:elevation="5dp"
+    <LinearLayout
+        android:id="@+id/home_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ham_burger"
-            android:clickable="true"
-            android:layout_centerVertical="true"
-            android:padding="5dp"
-            android:id="@+id/ham_burger">
-        </ImageView>
-        <ImageView
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            android:padding="20dp">
 
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_person_24"
-            android:layout_alignParentRight="true"
-            android:id="@+id/person_avatar"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            />
+            <ImageView
+                android:id="@+id/ham_burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ham_burger"></ImageView>
 
-        <ImageView
-            android:id="@+id/search_button"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_search_24"
-            android:layout_toLeftOf="@+id/person_avatar"
-            android:clickable="true"/>
+            <ImageView
 
-    </RelativeLayout>
+                android:id="@+id/person_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_person_24" />
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/person_avatar"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_search_24" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Top Specialities"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="18sp" />
 
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/specialistrecylerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="10dp"
+                        android:isScrollContainer="false"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.03" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Health Articles"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="18sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/article_list_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:horizontalSpacing="10dp"
+                        android:isScrollContainer="false"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="10dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

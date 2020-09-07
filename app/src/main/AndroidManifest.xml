@@ -11,12 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Screens.HomePageActivity"></activity>
-        <activity android:name=".Common.GettingStarted" />
-        <activity android:name=".PhoneAuth" />
+        <activity android:name=".Screens.HomePageActivity"
+            android:theme="@style/HomeTheme"></activity>
+        <activity android:name=".Screens.SearchDoctor" android:parentActivityName=".Screens.HomePageActivity"
+            ></activity>
+        <activity android:name=".Common.GettingStarted"
+            android:theme="@style/HomeTheme"/>
+        <activity android:name=".PhoneAuth"
+            android:theme="@style/HomeTheme"/>
         <activity
             android:name=".Common.SplashScreen"
-            android:theme="@style/AppTheme">
+            android:theme="@style/HomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

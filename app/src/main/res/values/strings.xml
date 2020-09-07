@@ -2,12 +2,7 @@
     <string name="app_name">Hospital</string>
 
 
-
-
-
-
-
-<!--    nav-->
+    <!--    nav-->
 
     <string name="nav_appointments">Appointments</string>
     <string name="nav_consultations">Consultations</string>
@@ -22,36 +17,11 @@
     <string name="nav_pay">Payment</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="lets_get_started">Get Started</string>
     <string name="splash_string_1">Online Consultation</string>
     <string name="splash_string_2">Book Appointment</string>
     <string name="splash_string_3">Quick Testing </string>
     <string name="splash_string_4">Regular Health Tips</string>
-
-
-
-
-
-
-
-
-
 
 
     <string name="splash_desc_1">Talk to our doctors anytime

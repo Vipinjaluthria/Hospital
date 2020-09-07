@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:minWidth="300dp"
+    android:maxWidth="300dp"
+
+    android:layout_marginRight="5dp"
+    android:layout_height="370dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/article_card"
+    android:paddingBottom="10dp"
+    android:minHeight="370dp"
+    android:maxHeight="370dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/article_image_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp">
+
+        </ImageView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/guideline"
+            android:background="#000"
+            android:orientation="horizontal"
+           ></androidx.constraintlayout.widget.Guideline>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/article_title_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textColor="#1C1F24"
+                android:textFontWeight="1000"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/article_desc_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textColor="#C92E2E36"
+                android:textFontWeight="400"
+                android:textSize="12sp"></TextView>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

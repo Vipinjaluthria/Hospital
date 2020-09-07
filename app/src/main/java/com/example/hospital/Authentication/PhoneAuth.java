@@ -1,10 +1,9 @@
-package com.example.hospital;
+package com.example.hospital.Authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.hospital.Common.SplashScreen;
+import com.example.hospital.MainActivity;
+import com.example.hospital.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -95,14 +95,19 @@ public class PhoneAuth extends AppCompatActivity {
             codeverify.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String code = codeedit.getText().toString();
+                    String code=codeedit.getText().toString();
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
                     signInWithPhoneAuthCredential(credential);
 
                 }
             });
+
+
         }
+
     };
+
+
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -115,7 +120,7 @@ public class PhoneAuth extends AppCompatActivity {
                             FirebaseUser user = task.getResult().getUser();
 
                             Toast.makeText(PhoneAuth.this, "successful", Toast.LENGTH_SHORT).show();
-                            Intent intent=new Intent(getApplicationContext(), SplashScreen.class);
+                            Intent intent=new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
                             // ...
                         } else {

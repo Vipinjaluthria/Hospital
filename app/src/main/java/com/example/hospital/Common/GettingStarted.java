@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
-import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -16,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.hospital.AdapterClass.SliderAdapter;
-import com.example.hospital.PhoneAuth;
 import com.example.hospital.R;
 import com.example.hospital.Screens.HomePageActivity;
 
