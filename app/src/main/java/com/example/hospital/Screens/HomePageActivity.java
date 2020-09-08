@@ -84,11 +84,11 @@ public class HomePageActivity extends AppCompatActivity implements  NavigationVi
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
-        firebaseFirestore.collection("Specialist").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        firebaseFirestore.collection("specialities").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for (QueryDocumentSnapshot doc:task.getResult()) {
-                    Specialist specialist = new Specialist("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcTa0HAi8nPpenLZemVehBMtO2az3PQ8UZkg&usqp=CAU", doc.getId());
+                    Specialist specialist = new Specialist(doc.getString("image"), doc.getId());
                     specialistList.add(specialist);
                     specialistAdapter.notifyDataSetChanged();
                 }

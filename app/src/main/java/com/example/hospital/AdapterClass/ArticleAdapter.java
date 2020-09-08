@@ -32,9 +32,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.Articler
     @NonNull
     @Override
     public ArticlerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_article,null,false) ;
-        RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT) ;
+        View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_article,parent,false) ;
+        RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(950,
+                1000) ;
         LayoutView.setLayoutParams(lp);
 
         ArticlerViewHolder rcv = new ArticlerViewHolder(LayoutView) ;
