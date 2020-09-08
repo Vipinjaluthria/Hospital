@@ -99,6 +99,9 @@ public class HomePageActivity extends AppCompatActivity implements  NavigationVi
 
         recyclerView.setAdapter(specialistAdapter);
         navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+
+
 
         articlesList = new ArrayList<>() ;
         getArticles() ;
@@ -165,6 +168,18 @@ public class HomePageActivity extends AppCompatActivity implements  NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent intent = null;
+        System.out.println("Clicked");
+        switch (item.getItemId()){
+            case R.id.nav_appointment :
+                intent = new Intent(getApplicationContext(),AppointmentsActivity.class) ;
+                break ;
+            default:break;
+
+        }
+        startActivity(intent) ;
+
+
 
 
 
